@@ -1,0 +1,25 @@
+.img-logo{
+    max-width: 100px;
+  }
+  .click-prod{
+     max-width: 80px;
+     border-radius: 50%;
+     margin-left:48%;
+  }
+  .cardImg{
+    max-width: 150px;
+    margin-left: 10%;
+  }
+  .card{
+    max-width: 200px;
+    display: inline-block;
+    background-color: orange;
+    opacity: 80%;
+  }
+  .hacheuno{
+    font-size: 1px;
+  }
+  .Pe{
+  font-size: 30px;
+  }
+  @media()

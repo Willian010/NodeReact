@@ -32,7 +32,8 @@ export const Contador =({stock, agregarProducto}) => {
         <p>Numero de Clicks {contador}</p>
         <button onClick={decrementar} >Quitar</button>
         <button onClick={incrementar} >Agregar</button>
-        <button onClick={ ()=>(agregarProducto(contador))}>Agregar a la compra</button>
+        <button onClick={ ()=>(agregarProducto(contador))} 
+        >Agregar a la compra</button>
     </div>
     )
 }
