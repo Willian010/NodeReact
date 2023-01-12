@@ -5,11 +5,11 @@ import getFetch from "../Data/Data";
 
 
 
-export const ItemDetail =()=>{
+export const  ItemDetail =({item})=>{
 
-        const [data, setData] = useState({});
+     /*   const [data, setData] = useState({});
         const [loanding , setLoanding] = useState(true);
-  
+   
       
         useEffect(()=>{
              getFetch.then(response =>{
@@ -20,7 +20,7 @@ export const ItemDetail =()=>{
         )
         },[])
     
-       console.log(data)
+       console.log(data)*/
         
     
      return(
@@ -28,14 +28,14 @@ export const ItemDetail =()=>{
         <div>
         {
             
-            loanding ? <p>Cargando...</p>
-            :
+           // loanding ? <p>Cargando...</p>
+           // :
 
         
         <div>
-        <img src={data.img}/>
-        <h2>{data.price}</h2>
-        <h3>{data.descripcion}</h3>
+        <img src={item.img}/>
+        <h2>{item.price}</h2>
+        <h3>{item.descripcion}</h3>
         
         </div>
         

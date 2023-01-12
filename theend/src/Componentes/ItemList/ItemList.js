@@ -3,7 +3,7 @@ import { Item } from "../Item/Item";
 import getFetch from "../Data/Data";
 import { Link } from "react-router-dom";
 
-export const ItemList =({ })=>{
+export const ItemList =({items })=>{
 
         const [productos, setProductos] = useState([]);
         const [loanding , setLoading] = useState(true);
@@ -16,14 +16,17 @@ export const ItemList =({ })=>{
             }
         )
         },[]);  return(
-            <div>
+            <div className="list">
+                <h2>ItemList</h2>
+                
                 {
                 loanding ? <h2>Cargando...</h2>
                 :
-                productos.map(productos =>
-                <Link   key = {productos.name} to={`/item/${productos.id}`}>
-                <Item productos={productos}/></Link>
+            items.map(producto =>
+                 <Link key = {producto.name}> to={`/item/${producto.categoria}`}
+                <Item item={producto}/></Link>
                     )}
+                     
             </div>
         )
     }   

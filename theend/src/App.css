@@ -38,4 +38,13 @@
   to {
     transform: rotate(360deg);
   }
+  
+}
+.Nav{
+  background-color: white;
+  max-height: 50%;
+}
+.list{
+  background-color: orange;
+  max-height: 80%;
 }

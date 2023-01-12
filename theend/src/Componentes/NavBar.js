@@ -3,9 +3,10 @@ import { NavLink, Link } from "react-router-dom";
 
  export function Login() {
     return (
-      <div className="App">
-        
-    <header>
+      <nav>
+      <div className="Nav">
+              
+      <header>
       <nav>
     <div className="container-fluid">
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +22,9 @@ import { NavLink, Link } from "react-router-dom";
                 <NavLink className={({isActive})=>isActive ? "claseActive": "claseInactive"}
                  to="/productos/Placas">Placas</NavLink>
                 <NavLink className={({isActive})=>isActive ? "claseActive": "claseInactive"}
-                 to="/nosotros">Nosotros</NavLink>
+                 to="/Empleados">Empleados</NavLink>
+                 <NavLink className={({isActive})=>isActive ? "claseActive": "claseInactive"}
+                 to="/Eventos">Eventos</NavLink>
           
         
        
@@ -36,7 +39,7 @@ import { NavLink, Link } from "react-router-dom";
             <CartWidget/>
                     
         </div>
-        <ul>
+       <ul>
   <li><Link to="/productos/Masillas">Masillas</Link>
    </li>
    <li><Link to="/productos/Perfiles">Perfiles</Link>
@@ -53,7 +56,7 @@ import { NavLink, Link } from "react-router-dom";
         </header>
         </div>
       
-      
+        </nav>
     );
 
   }

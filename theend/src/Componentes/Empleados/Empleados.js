@@ -1,7 +1,13 @@
- export const Empleados = [
-    {"Martin" : 2000},
-    {"Pepe" : 3000},
-    {"Jose" : 2500}
+ 
+ import { Link } from "react-router-dom"
+ 
+ export const Empleados = () => {
+    return(
+        <h1>Empleados</h1>
+    )
 
-]
-console.log(Empleados)
+ }
+
+
+
+

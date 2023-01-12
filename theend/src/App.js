@@ -6,22 +6,21 @@ import { ItemDetailContainer } from './Componentes/ItemDetailContainer/ItemDetai
 import { ItemListContainer } from './Componentes/ItemListContainer/ItemListContainer';
 import {Login} from './Componentes/NavBar';
 import {Empleados} from './Componentes/Empleados/Empleados';
+import {PaginaEventos} from './Componentes/PaginaEventos/PaginaEventos';
 
-
-function App() {
-  const agregar = (productos) => {
-    console.log("funcion agregar" , productos)
-  }
-  return (
+function App(){
+return (
     <BrowserRouter>
       <div className="App">
             <Login/>
       
           <Routes>
             <Route path='/' element={<ItemListContainer/>}/>
+            <Route path="/productos" element={<ItemListContainer />}/>
             <Route path='/productos/:tipoProducto' element={<ItemListContainer/>}/>
-            <Route path='/empleados' element={<Empleados/>}/>
-            <Route path='/' element={<ItemListContainer/>}/>
+            <Route path='/Empleados' element={<Empleados/>}/>
+            <Route path='/Eventos' element={<PaginaEventos/>}/>
+            
             
             
             <Route path='/item' element={ <ItemDetailContainer/>}/>
@@ -32,6 +31,10 @@ function App() {
       </div>
       </BrowserRouter>
   );
-}
 
+  }
 export default App;
+/*function App() {
+  const agregar = (productos) => {
+    console.log("funcion agregar" , productos)
+  }*/
