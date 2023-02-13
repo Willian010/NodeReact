@@ -15,6 +15,12 @@
     display: inline-block;
     background-color: orange;
     opacity: 80%;
+    margin: 15px;
+    text-align: center;
+    image-orientation: center;
+    margin: 5%;
+    border-color: black;
+    
   }
   .hacheuno{
     font-size: 1px;

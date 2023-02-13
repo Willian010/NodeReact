@@ -9,6 +9,7 @@ import montante from '../assets/montante.jpg';
     
     {
         id:1,
+        unico : "uno",
         name : "Placa 9.5mm",
         img:[placas],
         price: ["$", 2200],
@@ -18,7 +19,8 @@ import montante from '../assets/montante.jpg';
     },
     {
         id:2,
-        name : "Placa 12.5mm",
+        unico : "dos",
+        name : "Placa 12.5mm", 
         img:[placas],
         price : ["$", 2300],
         categoria : "Placas",
@@ -26,13 +28,15 @@ import montante from '../assets/montante.jpg';
     },
     {
         id:3,
+        unico : "tres",
         name : "Solera 0.35mm",
         img:[solera],
         price : ["$", 789],
         categoria : "Perfiles",
-        descripcion: "Perfil de 0.35mm"
+        descripcion: "Perfil de 0.35mm" 
     }, {
         id:4,
+        unico : "cuatro",
         name : "Mont 0.35mm",
         img:[montante],
         price : ["$", 880],
@@ -40,13 +44,15 @@ import montante from '../assets/montante.jpg';
         descripcion: "Perfil de 0.35mm"
     },  {
         id:5,
-        name : "Masilla 18k",
+        unico : "cinco",
+        name : "Masilla 18kg",
         img:[masilla32],
         price : ["$", 3500],
         categoria : "Masillas",
         descripcion: "Masilla de 18k"
     }, { 
         id:6,
+        unico : "seis", 
         name : "Masilla 32kg",
         img:[masilla32],
         price : ["$",6600] ,
@@ -56,7 +62,7 @@ import montante from '../assets/montante.jpg';
     },
 ]
 
-const getFetch = new Promise((resolve, reject)=>{
+export const getFetch = new Promise((resolve, reject)=>{
     setTimeout(() => {
         resolve(arregloItems)
         reject(err => console.log(err))

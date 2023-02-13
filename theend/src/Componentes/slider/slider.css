@@ -1,0 +1,24 @@
+.slider-container{
+    margin: 0 auto;
+    overflow-x: hidden;
+    
+
+}
+.slider{
+    display: flex;
+    cursor: grab;
+
+}
+.img-carril{
+    height: 35rem;
+    max-width: 20rem;
+    padding: 2rem;
+    
+}
+.img-carril img{
+    height: 50%;
+    width: 80%;
+    pointer-events: none;
+    border: 1.5px solid black;
+
+}

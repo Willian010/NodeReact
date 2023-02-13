@@ -3,10 +3,12 @@ import { ItemList } from "../ItemList/ItemList";
 import { useParams} from "react-router-dom";
 import { useEffect, useState } from "react";
 import { arregloItems } from "../Data/Data";
-import { Item } from "../Item/Item";
+//import { Slider } from "../slider.js/slider";
+//import { Item } from "../Item/Item";
 
 export const ItemListContainer = () => {
   const {tipoProducto} = useParams();
+  console.log("tipoProducto" , typeof tipoProducto)
 
   const [Prod, setProd] = useState([]);
   console.log(Prod);
@@ -18,7 +20,7 @@ export const ItemListContainer = () => {
       
     }, 2000); 
   })
-
+ 
   useEffect(()=>{
     promesa.then(resultado=>{
         if(!tipoProducto){
@@ -37,9 +39,10 @@ console.log( "Prod" , Prod);
     
     
     
-  <div>
+  <div className="ItemListContainer">
             <p>item list container</p>
             <ItemList items={Prod}/>
+            
         </div>
     
     </>
