@@ -25,11 +25,12 @@ return (
 
       
           <Routes>
-            
+
+            <Route path="/" element={<ItemListContainer />}/>
             <Route path="/productos" element={<ItemListContainer />}/>
             <Route path='/productos/:tipoProducto' element={<ItemListContainer/>}/>
             <Route path='/Empleados' element={<Empleados/>}/>
-            <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
+            <Route path='/item/:productoId' element={<ItemDetailContainer/>}/>
             <Route path='/Eventos' element={<PaginaEventos/>}/>
             <Route path='/Cart' element={<CartContainer/>}/>
             

@@ -46,14 +46,13 @@ import { Slider } from "../slider/slider";
                  
      
         
-        
         <form className="d-flex" onSubmit={enviarformulario}>
           <input onChange={change} className="form-control me-2"  placeholder="Nombre" aria-label="Search" />
           <button className="btn btn-outline-success" type="submit" >Buscar Producto</button>
           
           
         </form> 
-
+      
 
         <div>
             

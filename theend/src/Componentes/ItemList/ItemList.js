@@ -33,10 +33,10 @@ export const ItemList =({items })=>{
                 {
                 loanding ? <h2>Cargando...</h2>
                 :
-            items.map(producto =>(
-              // <Link key = {producto.id} to={`/item/${producto.id}`}>
-                <Item item={producto} />
-              // </Link>
+            items.map(item =>(
+              <Link key = {item} to={`/item/${item.id}`}>
+                <Item item={item} />
+              </Link>
                     ))}
                      
             </div>

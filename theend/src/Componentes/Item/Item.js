@@ -23,9 +23,9 @@ export const Item =  ({item})=> {
             <p className="Pe">{item.name}</p>
             <p>{item.price}</p>
             
-            <Link to={`/item/${item.id}`}>
+            
             <button >Ver mas..</button>
-            </Link>
+            
              
         </div>
     ) 

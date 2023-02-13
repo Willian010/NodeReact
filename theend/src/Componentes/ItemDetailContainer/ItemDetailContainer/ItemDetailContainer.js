@@ -15,7 +15,7 @@ export const ItemDetailContainer = () => {
   const getItem = (id) => {
     return new Promise((resolve, reject) => {
    
-      const product = arregloItems.find(item=>item.id === item.name);
+      const product = arregloItems.find(item=>item.id === parseInt(id));
       //const pro = arregloItems.find((item)=>item.unico === unico  );
       
       resolve(product);
@@ -25,7 +25,7 @@ export const ItemDetailContainer = () => {
    useEffect(()=>{
     const getProducto = async()=>{
       const producto = await getItem(productoId);
-      //console.log("product",product)
+      //console.log("product",producto)
       setItem(producto)
      
     }
@@ -39,7 +39,7 @@ export const ItemDetailContainer = () => {
       
       <div>
           <h1>ItemDetail </h1>
-          <ItemDetail item={item}/>
+          <ItemDetail key={item} item={item}/>
           
       </div>
       
