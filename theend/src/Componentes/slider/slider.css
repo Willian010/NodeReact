@@ -1,24 +1,26 @@
 .slider-container{
     margin: 0 auto;
     overflow-x: hidden;
-    
+    display: flexbox;
+    height: 250px;
 
 }
 .slider{
-    display: flex;
+    display:flex;
     cursor: grab;
 
 }
 .img-carril{
-    height: 35rem;
-    max-width: 20rem;
-    padding: 2rem;
+    height: 30rem;
+    width: 40rem;
+    padding: 1.5rem;
     
 }
 .img-carril img{
     height: 50%;
-    width: 80%;
+    width: 120%;
     pointer-events: none;
-    border: 1.5px solid black;
+    border: 3px solid orange;
+    outline: 5px solid black;
 
 }

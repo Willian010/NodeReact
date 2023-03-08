@@ -10,6 +10,7 @@ export const CartContext = createContext();//Contexto
  export const CartProvider = ({children}) =>{ //CartProvedier( proveedor)
     //const productCartList = arregloItems;
     const [productCartList, setProductCartList] = useState([]); 
+    
     const isInCart = (id)=>{
         const elementExists = productCartList.some((elemento)=>elemento.id === id);
         return elementExists;
@@ -24,19 +25,24 @@ export const CartContext = createContext();//Contexto
         
         //si existe actualice la propiedad  quantity de ese prod
          if (isInCart(product.id)){
+            
+            //. findex estamos buscando el producto dentro del arreglo que cumpla esta condicion
             const productIndex = productCartList.findIndex(element=>element.id===product.id);
             //findIndex retorna la pocision donde se encuentra ese element
             //reutilizamos el mismo indx p/ actualizar la var qty dentro del emlement
             newLista[productIndex].quantity = newLista[productIndex].quantity + qty;
+            newLista[productIndex].totalPrice = newLista[productIndex].quantity * newLista[productIndex].price;
+
             ////console.log(newLista[productIndex]);
    
             setProductCartList(newLista)
         }else{
             
-            const newProduct = {...product, quantity:qty}
+             //si no existe, agregue el producto al listado
+            const newProduct = {...product, quantity:qty, totalPrice: qty*product.price}
 
             const newLista = [...productCartList];
-            newLista.push(newProduct)
+            newLista.push(newProduct);   
             //console.log("newProduct", newProduct);
             setProductCartList(newLista) ;
             
@@ -51,6 +57,7 @@ export const CartContext = createContext();//Contexto
 
     const deleteProduct  = (idProduct) => {
             const copyArray = [...productCartList];
+            //.filter creamos nuevo array con todos los elementos que cumplan la condición implementada por la función dada
             const newArray = copyArray.filter(elm =>elm.id  !== idProduct);
             setProductCartList(newArray);
             
@@ -61,11 +68,38 @@ export const CartContext = createContext();//Contexto
     } 
  
     
+        const getTotalProductos = ()=>{
+            // .reduce reducir el array insertado a un solo valor.
+            const totalProductos = productCartList.reduce((acc,item)=>acc + item.quantity,0);
+           // console.log("getTotalProductos", getTotalProductos)
+            return totalProductos;
+        }
        
+        const precioTotal  = () => {
+                const finDelprecio = [...productCartList];
+                const totalproducto = [...getTotalProductos]
+                
+                const selectedProducts = totalproducto.filter((fin) => fin.price);
+                
+                const totalPrice = selectedProducts.reduce((accumulator, fin) => accumulator + fin.price, 0);
+
+                console.log(selectedProducts)
+
+          ////  console.log(totalPrice);
+           /* const finDeprecio = [...productCartList];
+            const priceFinal = productCartList.reduce((totalPrecio, item)=>totalPrecio + item.price);
+
+             finDeprecio[priceFinal].totalPrice = finDeprecio[priceFinal].totalPrice + item.price;
+
+
+            console.log(finDeprecio);
+        }*/
+    }
     
-     return(                         
+     return(                          
         
-        <CartContext.Provider value= {{productCartList, addProduct, deleteProduct, clearAll, isInCart}}>
+        <CartContext.Provider value= {{productCartList, addProduct, deleteProduct, clearAll,
+         isInCart, getTotalProductos, precioTotal}}>
     
             
             {children}

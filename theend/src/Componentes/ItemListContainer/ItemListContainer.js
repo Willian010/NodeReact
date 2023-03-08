@@ -3,7 +3,8 @@ import { ItemList } from "../ItemList/ItemList";
 import { useParams} from "react-router-dom";
 import { useEffect, useState } from "react";
 import { arregloItems } from "../Data/Data";
-//import { Slider } from "../slider.js/slider";
+import { Slider } from "../slider/slider";
+import { CarrilContainer } from "../CarrilContainer/CarrilContainer";
 //import { Item } from "../Item/Item";
 
 export const ItemListContainer = () => {
@@ -44,7 +45,9 @@ console.log( "Prod" , Prod);
             <ItemList items={Prod}/>
             
         </div>
-    
+        <div>  
+       <CarrilContainer/>
+       </div>
     </>
   )
 }

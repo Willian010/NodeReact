@@ -88,6 +88,7 @@ export const  ItemDetail =({item})=>{
       import { CartContext } from "../../context/CartContext";
       import { getFetch } from "../Data/Data";
       import { Link } from "react-router-dom";
+      import "../ItemDetail/ItemDetail.css"; 
        
        export const ItemDetail = ({item})=>{
            const {addProduct} = useContext(CartContext);
@@ -106,7 +107,7 @@ export const  ItemDetail =({item})=>{
                    </div>
                    <div className='img-container'>
                        <h4>{item.title}</h4>
-                       <h5> {item.price}</h5>
+                       <h5> ${item.price}</h5>
                    </div>
                    <Contador initial={1} stock={10} onAdd={onAdd}/>
                    {

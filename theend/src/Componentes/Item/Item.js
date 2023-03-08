@@ -21,7 +21,7 @@ export const Item =  ({item})=> {
             
             <img src={item.img} alt="" className='cardImg'/>
             <p className="Pe">{item.name}</p>
-            <p>{item.price}</p>
+            <p>${item.price}</p>
             
             
             <button >Ver mas..</button>

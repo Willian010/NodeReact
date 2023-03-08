@@ -2,30 +2,33 @@ import { CartWidget } from "../CartWidget/CartWidget";
 import { NavLink, Link } from "react-router-dom";
 import "./NavBar.css";
 import { Slider } from "../slider/slider";
-
-
- export function Login() {
-
-//Enviar formulario
+import { WhatsApp } from "../WSP/WhatsApp";
+ 
+export function Login() {
   
-  const enviarformulario = (event) =>{
-    event.preventDefault()
-    console.log("Formulario")
-    alert ("Estamos ready")
-}
+
+
+  //Enviar formulario
+//enviar formulario
+ /////const enviarformulario = (event) =>{
+    /////event.preventDefault()
+    /////console.log("Formulario")
+    /////alert ("Estamos ready")
+/////}
 
   //Captura de info del input
 
-  const change = (event) => {
-    console.log("event", event)
-    console.log(event.target.value)
-} 
+/////const change = (event) => {
+    /////console.log("event", event)
+    /////console.log(event.target.value)
+/////} 
     return (
       <nav>
-      <div className="Nav">
+      <div className="Nav-nav">
               
       <header>
       <nav>
+      
     <div className="container-fluid">
      
       
@@ -40,43 +43,54 @@ import { Slider } from "../slider/slider";
                 <NavLink className="class-menu"
                  to="/productos/Placas">Placas</NavLink>
                 <NavLink className="class-menu"
-                 to="/Empleados">Empleados</NavLink>
-                 <NavLink className="class-menu"
-                 to="/Eventos">Eventos</NavLink>
+                 to="/steelframe">Steel Framing</NavLink>
                  
-     
+                
         
-        <form className="d-flex" onSubmit={enviarformulario}>
-          <input onChange={change} className="form-control me-2"  placeholder="Nombre" aria-label="Search" />
-          <button className="btn btn-outline-success" type="submit" >Buscar Producto</button>
-          
-          
-        </form> 
-      
 
-        <div>
+
+         
+                 
+                 
+  
+     
+        <div className="CartNav">
             
-            <CartWidget/>
+            <CartWidget />
 
                     
         </div>
-       <div>
-       <Slider/>
-       </div>
-
-        
         <div >
         </div> 
       </div>
-      
     
+        
+      <WhatsApp/>
   </nav>
         </header>
         </div>
-      
+        
+        
         </nav>
     );
 
   }
  
- 
+ /*  <div className="form">
+        
+        <form className="d-flex" onSubmit={enviarformulario}>
+          <input onChange={change} className="formulario-imput"  placeholder="Producto" aria-label="Search" />
+          <button className="btn btn-outline-success" type="submit"  >Buscar Producto</button>
+        </form> 
+        
+      
+        </div>  
+        
+        
+           <div>  
+       <Slider/>
+       </div>
+        
+        
+        
+        */

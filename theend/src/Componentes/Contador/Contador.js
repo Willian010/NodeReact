@@ -11,6 +11,7 @@ export const Contador =({stock, onAdd}) => {
     const incrementar = () => {
         if (contador < stock){
         setContador(contador + 1)}
+        
     }
     //declara las funciones 
 
@@ -29,7 +30,7 @@ export const Contador =({stock, onAdd}) => {
         //Luego reenderiza el componente con los valores que encontro.
     <div>
         
-        <p>Numero de Clicks {contador}</p>
+        <p className="Contador" >Cantidad {contador}</p>
         <button onClick={decrementar} >Quitar</button>
         <button onClick={incrementar} >Agregar</button>
         <button onClick={ ()=>(onAdd(contador))}//el click en evento onAdd llama prop contador

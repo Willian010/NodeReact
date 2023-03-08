@@ -1,0 +1,42 @@
+.NavFot{
+    
+    height: 150px;
+    display: flex;
+   
+}
+.fot{
+    height: 200px ;
+   
+}
+.mapa{
+    
+    width: 45%;
+    padding-left: 10px;     
+    
+}
+.footer{
+    height: 180px;
+    background-image: url(/src/Componentes/assets/Carrito/ImgFooter.jpeg);
+    
+}
+.redes{
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    margin: 10px;
+}
+.logo{
+    height: 120px;
+    width: 150px;
+    border: 5% black;
+    border-radius: 5%;
+
+}
+
+    
+        
+        
+        
+        
+        
+        

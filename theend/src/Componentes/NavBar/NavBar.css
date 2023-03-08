@@ -1,17 +1,38 @@
 .class-menu{
     display: inline-block;
-    background: orange;
+    background-color: orange;
+    opacity: .6;
     color: black;
-    padding: 10px 30px;
-    text-decoration: none;
+    padding: 10px 16px;
+    text-decoration: none; 
+    border-radius: 5%;
+
 }
 .class-menu:hover{
     background-color: black;
     
 }
+.container-fluid{
+    width: 80%;}
 nav{
-    background: orange;
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
+    background-image: url(/src/Componentes/assets/Carrito/MAconstruccion.jpeg);
+    padding-bottom: 15px;
+    padding-top: 23px;
+    margin:0px;
+    background-position: 800px;
+    
+   
+  
+    
+}
+.form{
+    margin-left: 480px;
+    margin-top: 50px;
+     
+}
+.CartNav{
+    position: static;
+    justify-items: left;
+
+
 }

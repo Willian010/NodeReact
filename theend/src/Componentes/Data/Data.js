@@ -12,7 +12,7 @@ import montante from '../assets/montante.jpg';
         unico : "uno",
         name : "Placa 9.5mm",
         img:[placas],
-        price: ["$", 2200],
+        price:  2200,
         categoria: "Placas",
         descripcion: "Placas de yeso de 9.5mm"
         
@@ -22,7 +22,7 @@ import montante from '../assets/montante.jpg';
         unico : "dos",
         name : "Placa 12.5mm", 
         img:[placas],
-        price : ["$", 2300],
+        price :  2300,
         categoria : "Placas",
         descripcion: "Placa de yeso de 12.5mm"
     },
@@ -31,7 +31,7 @@ import montante from '../assets/montante.jpg';
         unico : "tres",
         name : "Solera 0.35mm",
         img:[solera],
-        price : ["$", 789],
+        price :  789,
         categoria : "Perfiles",
         descripcion: "Perfil de 0.35mm" 
     }, {
@@ -39,7 +39,7 @@ import montante from '../assets/montante.jpg';
         unico : "cuatro",
         name : "Mont 0.35mm",
         img:[montante],
-        price : ["$", 880],
+        price : 880,
         categoria : "Perfiles",
         descripcion: "Perfil de 0.35mm"
     },  {
@@ -47,7 +47,7 @@ import montante from '../assets/montante.jpg';
         unico : "cinco",
         name : "Masilla 18kg",
         img:[masilla32],
-        price : ["$", 3500],
+        price :  3500,
         categoria : "Masillas",
         descripcion: "Masilla de 18k"
     }, { 
@@ -55,7 +55,7 @@ import montante from '../assets/montante.jpg';
         unico : "seis", 
         name : "Masilla 32kg",
         img:[masilla32],
-        price : ["$",6600] ,
+        price : 6600 ,
         categoria : "Masillas",
         descripcion: "Masilla 32k"
         
