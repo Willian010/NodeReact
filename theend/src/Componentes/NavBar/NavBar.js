@@ -23,11 +23,11 @@ export function Login() {
     /////console.log(event.target.value)
 /////} 
     return (
-      <nav>
+      <nav className="navi">
       <div className="Nav-nav">
               
       <header>
-      <nav>
+      
       
     <div className="container-fluid">
      
@@ -66,7 +66,7 @@ export function Login() {
     
         
       <WhatsApp/>
-  </nav>
+  
         </header>
         </div>
         

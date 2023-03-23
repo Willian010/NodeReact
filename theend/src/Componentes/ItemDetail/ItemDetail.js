@@ -98,7 +98,7 @@ export const  ItemDetail =({item})=>{
                addProduct(item,contador);
                setQuantity(contador);
            }
-       
+        
            return(
                <div className='detail-container'>
                    <p style={{width: "100%"}}>item detail</p>

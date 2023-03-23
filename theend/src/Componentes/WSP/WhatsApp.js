@@ -5,7 +5,7 @@ import "./WhatsApp.css";
 
 export function WhatsApp () {
     const whatsapp = () => {
-         window.open('https://api.whatsapp.com/send?phone=0123456789', '_blank');
+         window.open('https://api.whatsapp.com/send?phone=1123257197', '_blank');
         };
         //Retorna una funcion de abrir otra ventana redirigiendote al whatsapp.
     return(

@@ -12,7 +12,8 @@ import { CartProvider } from './context/CartContext';
 //import {NavBar}  from './Componentes/NavBar/NavBar';
 import {Footer} from './Componentes/Footer/Footer';
 import Galeria from './Componentes/Galeria/Galeria';
-import { Slider } from './Componentes/slider/slider';
+import { PaginaFirebase } from './Componentes/PaginaFirebase/PaginaFirebase';
+
  
 
 
@@ -38,13 +39,12 @@ return (
             <Route path='/Eventos' element={<PaginaEventos/>}/>
             <Route path='/Cart' element={<CartContainer/>}/>
             <Route path='/ventana' element={<Login/>}/>
+            <Route path='/firebase' element={<PaginaFirebase/>}/>
             
-            
+             
             </Routes> 
 
-            <div>
-          <Slider/>
-        </div>
+          
     
         <Footer/>
       

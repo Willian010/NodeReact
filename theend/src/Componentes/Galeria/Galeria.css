@@ -1,9 +1,9 @@
 section{
     display: flex;
-    width: 1400px;
-    height: 600px;
+    width: 1350px;
+    height: 400px;
 }
-section img{
+ section img{
     width: 0;
     flex-grow: 1;
     object-fit: cover;
@@ -17,3 +17,11 @@ section img:hover{
     filter: contrast(120%);
 
 }
+@media screen and ( max-width: 360px) {
+    section {
+        width: 99%;
+        height: 100%;
+        
+    }
+}
+

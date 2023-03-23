@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { arregloItems } from "../Componentes/Data/Data";
 //import { arregloItems } from "../Componentes/Data/Data";
 
 
@@ -33,7 +34,7 @@ export const CartContext = createContext();//Contexto
             newLista[productIndex].quantity = newLista[productIndex].quantity + qty;
             newLista[productIndex].totalPrice = newLista[productIndex].quantity * newLista[productIndex].price;
 
-            ////console.log(newLista[productIndex]);
+            //console.log(newLista[productIndex]);
    
             setProductCartList(newLista)
         }else{
@@ -75,7 +76,7 @@ export const CartContext = createContext();//Contexto
             return totalProductos;
         }
        
-        const precioTotal  = () => {
+       /* const precioTotal  = () => {
                 const finDelprecio = [...productCartList];
                 const totalproducto = [...getTotalProductos]
                 
@@ -83,7 +84,7 @@ export const CartContext = createContext();//Contexto
                 
                 const totalPrice = selectedProducts.reduce((accumulator, fin) => accumulator + fin.price, 0);
 
-                console.log(selectedProducts)
+                console.log(selectedProducts)*/
 
           ////  console.log(totalPrice);
            /* const finDeprecio = [...productCartList];
@@ -94,16 +95,53 @@ export const CartContext = createContext();//Contexto
 
             console.log(finDeprecio);
         }*/
-    }
+
+
+       /* function finalizarCompra(){
+            const productosParaWsp = [...arregloItems];
+           
+            for (let i = 0; i < productosParaWsp.length; i++) {
+                productosParaWsp.push(productosParaWsp[i].name);
+            }
+           console.log(JSON.stringify(productosParaWsp));
+             window.open= ('https://api.whatsapp.com/send?phone=+541123257197&text=Me%20interesan%20los%20siguientes%20productos' + ' ' + JSON.stringify(productosParaWsp)) // Comento esta línea para no redirigir realmente en este ejemplo
+        */function finalizarCompra() {
+  const productosParaWsp = [];
+  
+  for (let i = 0; i < productosParaWsp.length; i++) {
+    productosParaWsp.push(productosParaWsp[i].arregloItems);
+  }
+  
+  console.log(JSON.stringify(productosParaWsp));
+  
+  const whatsappURL = 'https://api.whatsapp.com/send?phone=+541123257197&text=Me%20interesan%20los%20siguientes%20productos' + ' ' + JSON.stringify(productosParaWsp);
+  
+  const whatsappWindow = window.open(whatsappURL, '_blank');
+  
+  if (whatsappWindow) {
+    // La ventana se abrió correctamente
+    // Puedes agregar aquí cualquier otra lógica que necesites
+  } else {
+    // La ventana no se abrió correctamente, muestra un mensaje de error
+    console.error('No se pudo abrir la ventana de WhatsApp');
+  }
+}
+
+          //console.log(finalizarCompra)
+          ////
+
+          //window.open('https://api.whatsapp.com/send?phone=0123456789', '_blank') + ' ' + JSON.stringify(productosParaWsp);
+          //finalizarCompra();
+        
     
      return(                          
         
         <CartContext.Provider value= {{productCartList, addProduct, deleteProduct, clearAll,
-         isInCart, getTotalProductos, precioTotal}}>
+         isInCart, getTotalProductos, finalizarCompra}}>
     
             
             {children}
         </CartContext.Provider>
 
     )
-     }
+        }

@@ -5,7 +5,7 @@ import { CartItem } from "../CartItem/CartItem";
 
 
 export const CartContainer =()=>{
-    const {productCartList, clearAll , precioTotal} = useContext(CartContext)//agregamos el contexto no el proveedor.
+    const {productCartList, clearAll , finalizarCompra} = useContext(CartContext)//agregamos el contexto no el proveedor.
     //console.log('productCartList', productCartList)
 
    /*function finalizarCompra(carreto){
@@ -44,8 +44,10 @@ export const CartContainer =()=>{
          
                  }
                  <hr/>
-                                   <p onClick={precioTotal}>$</p>                                
+                                   <p>$</p>                                
                                   <button onClick={clearAll}>vaciar carrito</button>
+                                  <hr/>
+                                  <button  onClick={finalizarCompra}  >Enviar presupuesto por Whatsapp</button>
                     </>
                     :
                     <p>No hay productos.</p>

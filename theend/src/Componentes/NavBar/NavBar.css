@@ -36,3 +36,11 @@ nav{
 
 
 }
+@media screen and (max-width: 360px){
+    .navi{
+    
+    width: 100%px;
+    
+    }
+
+}

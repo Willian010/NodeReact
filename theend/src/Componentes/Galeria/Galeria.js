@@ -15,11 +15,10 @@ import './Galeria.css';
 
 const Galeria  = () => {
     return(
-        <Link to="/">
-            <section >
-                  
-                    <img src={steel1} />           
-                    <img src={steel2} /> 
+        <Link to="/" className='galeria'>
+                  <section >
+                    <img src={steel1} />
+                    <img src={steel2} />            
                     <img src={steel3} />
                     <img src={steel4} />
                     <img src={steel5} />
@@ -29,7 +28,9 @@ const Galeria  = () => {
                     <img src={steel9} />
                     <img src={steel10} />
                     <img src={steel11} />
-            </section>
+                    </section>
+                   
+                    
             </Link>
     )
 }
